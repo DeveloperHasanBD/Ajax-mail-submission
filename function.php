@@ -1,3 +1,11 @@
+<!-- Enqueue  -->
+wp_enqueue_script( 'enq-ajax-data', get_template_directory_uri() . '/assets/js/ajax-data.js', array(), $js_version, true );
+
+wp_localize_script('enq-ajax-data', 'action_url_ajax', [
+    'ajax_url' => admin_url('admin-ajax.php'),
+]);
+<!-- end enqueue  -->
+
 
 function aci_card_form_action()
 {
